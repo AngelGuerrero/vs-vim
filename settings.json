@@ -1,0 +1,113 @@
+{
+    //
+    // VIM SETTINGS
+    //
+    "vim.leader": ",",
+
+    //
+    // NORMAL MODE
+    //
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // Fast saving
+            "before": [ "<leader>", "w" ],
+            "commands": [ ":w!" ]
+        },
+        {
+            // Add a new line below
+            "before": [ "g", "i" ],
+            "after": [ "o", "<Esc>", "k" ]
+        },
+        {
+            // Fast quit
+            "before": [ "<leader>", "q" ],
+            "commands": [ ":q!" ]
+        },
+        {
+            // Fast search
+            "before": [ "<space>" ],
+            "after": [ "/" ]
+        },
+
+        // Add comma
+        {
+            // Add comma and new line
+            "before": [ "ñ", "v" ],
+            "after": [ "A", ",", "<Esc>", "o" ]
+        },
+        {
+            // Remove the last comma
+            "before": [ "ñ", "r" ],
+            "after": [ "$", "x", "_" ]
+        },
+        {
+            // Add a comma at the end of line
+            "before": [ "ñ", "a" ],
+            "after": [ "A", ",", "<Esc>", "_" ]
+        },
+        {
+            // Add a space between words
+            "before": [ "<leader>", "<space>" ],
+            "after": [ "a", "<space>", "<Esc>", "h" ],
+        },
+
+        // Comments
+        {
+            "before": [ "<leader>", "c" ],
+            "commands": [ "editor.action.commentLine" ],
+        },
+        {
+            "before": [ "<leader>", "a", "c" ],
+            "commands": [ "editor.action.addCommentLine" ],
+        },
+        {
+            "before": [ "<leader>", "b", "c" ],
+            "commands": [ "editor.action.blockComment" ],
+        },
+
+        // Editor actions
+        {
+            "before": [ "<leader>", "f" ],
+            "commands": [ "actions.find" ],
+        }
+    ],
+
+    //
+    // INSERT MODE 
+    //
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            // Normal mode
+            "before": [ "j", "k" ],
+            "after": [ "<Esc>" ]
+        },
+        {
+            // Fast saving
+            "before": [ "<leader>", "w" ],
+            "after": [ "<Esc>" ],
+            "commands": [ ":w!" ],
+        },
+        {
+            // Add a comma at end line and add a new line
+            "before": [ "<leader>", "e" ],
+            "after": [ "<Esc>", "A", ",", "<cr>" ]
+        },
+        {
+            // Toggle comment in insert mode
+            "before": [ "<leader>", "a", "c" ],
+            "commands": [ "editor.action.commentLine" ],
+        }
+    ],
+
+    //
+    // VISUAL MODE
+    //
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // Normal mode
+            "before": [ "j", "k" ],
+            "after": [ "<Esc>" ]
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile"
+}
